@@ -1,0 +1,169 @@
+:root {
+  --dark-black: #272a31;
+  --light-orange: #ec5242;
+  --light-gray: #d3d3d3;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+h3 {
+  font-size: 3vw;
+}
+
+nav a {
+  font-weight: bold !important;
+}
+
+/* Shared styles */
+
+.hover_underline:hover {
+  text-decoration: underline !important;
+}
+
+.section__heading {
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+
+.section__heading::after {
+  content: " ";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #ec5242;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Background Colors */
+
+.bg-dark-black {
+  background-color: var(--dark-black);
+}
+
+.bg-light-orange {
+  background-color: var(--light-orange);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+/* Font Colors */
+
+.text-dark-black {
+  color: var(--dark-black);
+}
+
+.text-light-orange {
+  color: var(--light-orange);
+}
+
+.text-light-gray {
+  color: var(--light-gray);
+}
+
+/* NavBar */
+
+#link-campaign {
+  border: 5px solid var(--light-orange);
+}
+
+/* Main section */
+
+main {
+  background-image: url("assets/main-bg-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: max-content;
+  min-height: calc(100vh - 6.5rem);
+  padding: 6rem 0;
+}
+
+main h1 {
+  background-image: url("assets/text-bg.jpg");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 50%;
+  font-weight: 900;
+  font-size: 6vw;
+}
+
+.main__description {
+  background-color: #f7f7f8;
+  border: 2px solid white;
+  font-size: 18px;
+}
+
+.main__event_date {
+  font-weight: 900;
+}
+
+/* Program Section */
+
+#program {
+  background-image: url("assets/pattern_bg.png");
+  background-repeat: repeat;
+  padding: 4rem 0;
+}
+
+.program__card {
+  gap: 8px;
+  padding: 1rem;
+  background-color: rgba(128, 128, 128, 0.15);
+}
+
+.program__card > i {
+  font-size: 40px;
+}
+
+.program__card > p {
+  height: 168px;
+  margin: 0;
+}
+
+/* Speakers Section */
+
+#speakers {
+  padding: 3rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .program__card {
+    width: 280px;
+  }
+
+  .program__card > p {
+    height: 168px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .program__card {
+    width: 100% !important;
+    gap: 1rem;
+  }
+
+  .program__card > p {
+    height: max-content;
+  }
+}
