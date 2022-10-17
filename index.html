@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <title>Global AI Summit Homepage</title>
+</head>
+<body>
+  <header>
+    <div class="container-fluid bg-dark-black">
+      <div class="container bg-dark-black d-flex gap-4 justify-content-end p-1">
+        <a href="#"><img src="assets/facebook-icon.png" alt="Link to facebook event page"></a>
+        <a href="#"><img src="assets/twitter-icon.png" alt="Link to tweeter event page"></a>
+        <a href="#" class="text-white pe-5 text-decoration-none hover_underline">English</a>
+      </div>
+    </div>
+    <nav class="navbar bg-light">
+      <div class="container-fluid d-flex justify-content-evenly">
+        <a class="navbar-brand" href="#">
+          <img width="150" src="assets/logo-w-black.svg" alt="Global AI Summit Logo" />
+        </a>
+        <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-row gap-5">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Program</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Join</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sponsor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+          <li class="nav-link ps-lg-5"><a id="link-campaign" class="px-2 py-1 text-decoration-none text-light-orange" href="#">Campaign</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid">
+    <article class="container d-flex flex-column justify-content-center align-items-start h-100">
+      <h3 class="text-light-orange">"Hello, Sharing world!"</h3>
+      <h1 class="text-light-orange">Artificial Intelligence <br> Global Summit <br> 2022</h1>
+      <p class="main__description p-3 col-lg-7 col-12">The Global AI summit gathers the most prominent policymakers, world’s leading investors, policy thought leaders and innovators working to deploy AI by exploring the state of AI, investment cases, commitments and governance to bring AI solutions at a global scale</p>
+      <h3 class="main__event_date text-dark-black">September 13-15, 2022</h3>
+      <h4>@ King Abdulaziz International Conference Center in Riyadh</h4>
+    </article>
+  </main>
+  <section id="program" class="container-fluid bg-dark-black">
+    <h4 class="section__heading text-white mb-4">Main Program</h4>
+    <div class="container py-5 d-flex flex-lg-row flex-column gap-2">
+      <article class="program__card text-white d-flex flex-lg-column flex-row justify-content-lg-center justify-content-start align-items-center">
+        <i class="fa-sharp fa-solid fa-city"></i>
+        <h4 class="card__heading text-center text-light-orange">Smart Cities</h4>
+        <p class="card__description text-lg-center text-start">How can we embrace AI to turn cities into accessible, personalized and human-centered ecosystems of digital citizens?</p>
+      </article>
+      <article class="program__card text-white d-flex flex-lg-column flex-row justify-content-lg-center justify-content-start align-items-center">
+        <i class="fa-solid fa-leaf"></i>
+        <h4 class="card__heading text-center text-light-orange">Environment</h4>
+        <p class="card__description text-lg-center text-start">How can we leverage the convergence of AI and data science to analyze the planet, fight climate change, and build a better sustainable future?</p>
+      </article>
+      <article class="program__card text-white d-flex flex-lg-column flex-row justify-content-lg-center justify-content-start align-items-center">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h4 class="card__heading text-center text-light-orange">Healthcare</h4>
+        <p class="card__description text-lg-center text-start">How can we advance patients' ecosystems, identity and data, from drug research and development to future medical facilities, services and profiles?</p>
+      </article>
+      <article class="program__card text-white d-flex flex-lg-column flex-row justify-content-lg-center justify-content-start align-items-center">
+        <i class="fa-solid fa-car"></i>
+        <h4 class="card__heading text-center text-light-orange">Transportation</h4>
+        <p class="card__description text-lg-center text-start">From autonomous vehicles to seamless and traffic efficient loops and logistics that connect future communities and individuals with seamless access to everything</p>
+      </article>
+      <article class="program__card text-white d-flex flex-lg-column flex-row justify-content-lg-center justify-content-start align-items-center">
+        <i class="fa-solid fa-solar-panel"></i>
+        <h4 class="card__heading text-center text-light-orange">Energy</h4>
+        <p class="card__description text-lg-center text-start">How can we embrace AI behind solar panels and energy efficiency technologies, fight climate change and build the bridges between energy capitals?</p>
+      </article>
+    </div>
+    <a href="#" class="hover_underline text-decoration-none text-center text-white d-block fs-4">See The Whole Program</a>
+  </section>
+  <section id="speakers" class="container-fluid">
+    <h4 class="section__heading text-dark-black mb-4">Featured Speakers</h4>
+    <div class="container">
+
+    </div>
+  </section>
+</body>
+</html>
