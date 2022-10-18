@@ -1,0 +1,306 @@
+:root {
+  --dark-black: #272a31;
+  --light-orange: #ec5242;
+  --light-gray: #d3d3d3;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+
+h3 {
+  font-size: 3vw;
+}
+
+nav a {
+  font-weight: bold !important;
+}
+
+/* Shared styles */
+
+.hover_underline:hover {
+  text-decoration: underline !important;
+}
+
+.hover_color_orange:hover {
+  color: var(--light-orange);
+}
+
+.hover_color_dark_black:hover {
+  color: var(--dark-black);
+}
+
+.section__heading {
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+
+.section__heading::after {
+  content: " ";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #ec5242;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Background Colors */
+
+.bg-dark-black {
+  background-color: var(--dark-black);
+}
+
+.bg-light-orange {
+  background-color: var(--light-orange);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+/* Font Colors */
+
+.text-dark-black {
+  color: var(--dark-black);
+}
+
+.text-light-orange {
+  color: var(--light-orange);
+}
+
+.text-light-gray {
+  color: var(--light-gray);
+}
+
+/* NavBar */
+
+nav {
+  position: sticky !important;
+}
+
+nav i {
+  color: #414141;
+}
+
+.navbar-brand > img {
+  width: 150px;
+}
+
+#link-campaign {
+  border: 5px solid var(--light-orange);
+}
+
+#mobile-menu-open-icon {
+  cursor: pointer;
+}
+
+.fixed {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+/* Main section */
+
+main {
+  background-image: url("assets/main-bg-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: max-content;
+  min-height: calc(100vh - 6.5rem);
+  padding: 6rem 0;
+}
+
+main h1 {
+  background-image: url("assets/text-bg.jpg");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 50%;
+  font-weight: 900;
+  font-size: calc(1.375rem + 3vw);
+}
+
+main h3 {
+  font-size: calc(1.375rem + 1vw);
+  letter-spacing: 2px;
+}
+
+.main__description {
+  background-color: #f7f7f8;
+  border: 2px solid white;
+}
+
+.main__event_date {
+  font-weight: 900;
+  font-size: calc(1.375rem + 1vw);
+}
+
+/* Program Section */
+
+#program {
+  background-image: url("assets/pattern_bg.png");
+  background-repeat: repeat;
+  padding: 4rem 0;
+  height: max-content;
+}
+
+.program__card {
+  gap: 8px;
+  height: max-content;
+  padding: 1rem;
+  background-color: rgba(128, 128, 128, 0.15);
+}
+
+.program__card i {
+  font-size: 40px;
+}
+
+.card__description {
+  height: max-content;
+  margin: 0;
+}
+
+/* Speakers Section */
+
+#speakers {
+  padding: 3rem 0;
+}
+
+.speaker_image_container {
+  position: relative;
+  width: 220px;
+  height: auto;
+  padding: 0 1rem 1rem 0;
+}
+
+.speaker_image_container > img {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.speaker_image_container::after {
+  content: " ";
+  position: absolute;
+  top: -20px;
+  left: -21px;
+  width: 100px;
+  height: 100px;
+  background-image: url("assets/speaker-bg.png");
+  background-position: 0;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* Partners Section */
+
+#partners {
+  padding: 3rem 0;
+  background-color: #414246;
+}
+
+.sponsors_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sponsors_list > li {
+  list-style: none;
+  width: 200px;
+  margin: 2rem;
+}
+
+/* Footer Section */
+
+footer {
+  background-color: #f6f6f6;
+}
+
+footer .footer_brand {
+  width: 250px;
+}
+
+/* Components */
+
+#mobile-menu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-orange);
+  color: #f7f7f8;
+  z-index: 99;
+}
+
+#mobile-menu i {
+  cursor: pointer;
+  height: max-content;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 992px) {
+  main h1 {
+    font-size: 6vw !important;
+  }
+
+  main h3 {
+    font-size: 3vw;
+  }
+
+  .main__event_date {
+    font-size: 3vw !important;
+  }
+
+  .program__card {
+    width: 280px;
+    height: 100%;
+  }
+
+  .card__container {
+    height: 440px;
+  }
+
+  .card__description {
+    min-height: 168px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .program__card {
+    width: 100% !important;
+    gap: 1rem;
+  }
+
+  .card__heading {
+    width: 40%;
+  }
+
+  .card__heading > h4 {
+    width: 100%;
+  }
+
+  .card__description {
+    width: 60%;
+  }
+}
