@@ -62,7 +62,9 @@ const GenerateSpeakerEl = (speaker) => `
 
 speakersData.forEach((speaker) => {
   const speakerEl = GenerateSpeakerEl(speaker);
-  speakersContainerEl.insertAdjacentHTML('beforeend', speakerEl);
+  if (speakersContainerEl) {
+    speakersContainerEl.insertAdjacentHTML('beforeend', speakerEl);
+  }
 });
 
 brandLogos.forEach((logo) => {
