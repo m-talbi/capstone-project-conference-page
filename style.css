@@ -37,6 +37,14 @@ nav a {
   text-decoration: underline !important;
 }
 
+.hover_color_orange:hover {
+  color: var(--light-orange);
+}
+
+.hover_color_dark_black:hover {
+  color: var(--dark-black);
+}
+
 .section__heading {
   font-weight: 700;
   text-align: center;
@@ -84,8 +92,31 @@ nav a {
 
 /* NavBar */
 
+nav {
+  position: sticky !important;
+}
+
+nav i {
+  color: #414141;
+}
+
+.navbar-brand > img {
+  width: 150px;
+}
+
 #link-campaign {
   border: 5px solid var(--light-orange);
+}
+
+#mobile-menu-open-icon {
+  cursor: pointer;
+}
+
+.fixed {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 20;
 }
 
 /* Main section */
@@ -105,17 +136,22 @@ main h1 {
   -webkit-text-fill-color: transparent;
   background-position: 50%;
   font-weight: 900;
-  font-size: 6vw;
+  font-size: calc(1.375rem + 3vw);
+}
+
+main h3 {
+  font-size: calc(1.375rem + 1vw);
+  letter-spacing: 2px;
 }
 
 .main__description {
   background-color: #f7f7f8;
   border: 2px solid white;
-  font-size: 18px;
 }
 
 .main__event_date {
   font-weight: 900;
+  font-size: calc(1.375rem + 1vw);
 }
 
 /* Program Section */
@@ -124,20 +160,22 @@ main h1 {
   background-image: url("assets/pattern_bg.png");
   background-repeat: repeat;
   padding: 4rem 0;
+  height: max-content;
 }
 
 .program__card {
   gap: 8px;
+  height: max-content;
   padding: 1rem;
   background-color: rgba(128, 128, 128, 0.15);
 }
 
-.program__card > i {
+.program__card i {
   font-size: 40px;
 }
 
-.program__card > p {
-  height: 168px;
+.card__description {
+  height: max-content;
   margin: 0;
 }
 
@@ -147,23 +185,122 @@ main h1 {
   padding: 3rem 0;
 }
 
-@media screen and (min-width: 768px) {
-  .program__card {
-    width: 280px;
+.speaker_image_container {
+  position: relative;
+  width: 220px;
+  height: auto;
+  padding: 0 1rem 1rem 0;
+}
+
+.speaker_image_container > img {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.speaker_image_container::after {
+  content: " ";
+  position: absolute;
+  top: -20px;
+  left: -21px;
+  width: 100px;
+  height: 100px;
+  background-image: url("assets/speaker-bg.png");
+  background-position: 0;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* Partners Section */
+
+#partners {
+  padding: 3rem 0;
+  background-color: #414246;
+}
+
+.sponsors_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sponsors_list > li {
+  list-style: none;
+  width: 200px;
+  margin: 2rem;
+}
+
+/* Footer Section */
+
+footer {
+  background-color: #f6f6f6;
+}
+
+footer .footer_brand {
+  width: 250px;
+}
+
+/* Components */
+
+#mobile-menu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-orange);
+  color: #f7f7f8;
+  z-index: 99;
+}
+
+#mobile-menu i {
+  cursor: pointer;
+  height: max-content;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 992px) {
+  main h1 {
+    font-size: 6vw !important;
   }
 
-  .program__card > p {
-    height: 168px;
+  main h3 {
+    font-size: 3vw;
+  }
+
+  .main__event_date {
+    font-size: 3vw !important;
+  }
+
+  .program__card {
+    width: 280px;
+    height: 100%;
+  }
+
+  .card__container {
+    height: 440px;
+  }
+
+  .card__description {
+    min-height: 168px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .program__card {
     width: 100% !important;
     gap: 1rem;
   }
 
-  .program__card > p {
-    height: max-content;
+  .card__heading {
+    width: 40%;
+  }
+
+  .card__heading > h4 {
+    width: 100%;
+  }
+
+  .card__description {
+    width: 60%;
   }
 }
