@@ -60,12 +60,12 @@ const GenerateSpeakerEl = (speaker) => `
   </article>
 `;
 
-speakersData.forEach((speaker) => {
-  const speakerEl = GenerateSpeakerEl(speaker);
-  if (speakersContainerEl) {
+if (speakersContainerEl) {
+  speakersData.forEach((speaker) => {
+    const speakerEl = GenerateSpeakerEl(speaker);
     speakersContainerEl.insertAdjacentHTML('beforeend', speakerEl);
-  }
-});
+  });
+}
 
 brandLogos.forEach((logo) => {
   logo.addEventListener('click', () => {
