@@ -161,7 +161,7 @@ nav i {
 #program {
   background-image: url("assets/pattern_bg.png");
   background-repeat: repeat;
-  padding: 4rem 0;
+  padding: 6rem 0;
   height: max-content;
 }
 
@@ -184,7 +184,7 @@ nav i {
 /* Speakers Section */
 
 #speakers {
-  padding: 3rem 0;
+  padding: 6rem 0;
 }
 
 .speaker_image_container {
@@ -213,10 +213,29 @@ nav i {
   z-index: 0;
 }
 
+.speaker_occupation {
+  position: relative;
+}
+
+.speaker_occupation::after {
+  content: " ";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: rgba(128, 128, 128, 0.26);
+  border-radius: 8px;
+}
+
+.speaker_description {
+  display: contents;
+}
+
 /* Partners Section */
 
 #partners {
-  padding: 3rem 0;
+  padding: 6rem 0;
   background-color: #414246;
 }
 
@@ -281,14 +300,14 @@ footer .logo {
 /* AI Section */
 
 #artificial-intelligence {
-  padding: 4rem 0;
+  padding: 6rem 0;
   background-color: var(--dark-black);
 }
 
 /* Past Events Section */
 
 #past-events {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 #past-events figure {
