@@ -48,22 +48,24 @@ const speakersData = [
 ];
 
 const GenerateSpeakerEl = (speaker) => `
-  <article class="col-lg-5 p-3">
-    <div class="speaker_image_container float-start">
+  <article class="speaker_container col-lg-5 py-4 px-3">
+    <div class="speaker_image_container col-6 float-start">
       <img src=${speaker.image} alt="${speaker.name} picture">
     </div>
-    <div>
+    <div class="col-6 float-start">
       <h4>${speaker.name}</h4>
-      <p class="text-light-orange">${speaker.occupation}</p>
-      <p class="">${speaker.description}</p>
+      <p class="text-light-orange speaker_occupation pb-2">${speaker.occupation}</p>
     </div>
+    <p class="float-start speaker_description">${speaker.description}</p>
   </article>
 `;
 
-speakersData.forEach((speaker) => {
-  const speakerEl = GenerateSpeakerEl(speaker);
-  speakersContainerEl.insertAdjacentHTML('beforeend', speakerEl);
-});
+if (speakersContainerEl) {
+  speakersData.forEach((speaker) => {
+    const speakerEl = GenerateSpeakerEl(speaker);
+    speakersContainerEl.insertAdjacentHTML('beforeend', speakerEl);
+  });
+}
 
 brandLogos.forEach((logo) => {
   logo.addEventListener('click', () => {
