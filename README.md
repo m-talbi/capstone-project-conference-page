@@ -1,25 +1,45 @@
-# Capstone Project - Conference Page
+# Capstone project - Global AI Conference page
 
-- Follow these [design guidelines](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015).
-- Personalize the content of your page.
-- Use Lato font family.
-- Build 2 pages:
-> - The home page.
-> - The about page.
-- Each of these pages should have versions for 2 different screen sizes:
-> - Mobile: up to 768px wide.
-> - Desktop: 768px or wider.
-- Links
-> - The home page should have a link in the menu to the about page.
-> - The logo in the header links to the home page.
-- Mobile menu
-> - When the user clicks (or taps) the hamburger button on the header, the mobile menu appears over the page.
-> - Mobile menu should be consistent with the design (colors, typography, spacings, etc.).
-> - The mobile menu should have a close (X) button that closes the menu.
-- Dynamic page
-> - The section "Featured speakers" should be created dynamically in JavaScript.
-> - You should use a JavaScript variable with the data about the speakers and use it when the page loads to create the HTML for this section dynamically.
-- Give credit to the design author in the README.md file
-- Additional requirements
-> - implement some UX improvements: add the "More" button on the home page, include transitions and/or animations.
-> - implement the tickets page and the schedule page.
+This is my personel version of the conference page [design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) by [Cindy Shin in Behance](https://www.behance.net/adagio07).
+
+
+## This Project Is Built With
+
+- HTML
+- CSS
+- Javascript
+- FONT AWESOME ICONS
+- Bootstrap
+
+## Live Demo
+
+[Live Demo Link](https://kweeka1.github.io/capstone-project-conference-page/index.html)
+
+## Getting Started
+
+Clone this repository using the command down below then open index.html file.
+
+```
+git clone git@github.com:Kweeka1/capstone-project-conference-page.git
+```
+
+## Author
+
+- GitHub: [Mohamed Talbi](https://github.com/Kweeka1)
+
+## 🤝 Contributing
+
+Contributions to this project are very welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## License
+
+This project is available as open source under the terms of [MIT license](https://choosealicense.com/licenses/mit/).
+
+## Credit
+
+- Original design idea is made by [Cindy Shin in Behance](https://www.behance.net/adagio07).
+- Content of the page are taken from [Global AI Summit](https://globalaisummit.org/en/default.aspx) webpage.
