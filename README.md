@@ -42,4 +42,4 @@ This project is available as open source under the terms of [MIT license](https:
 ## Credit
 
 - Original design idea is made by [Cindy Shin in Behance](https://www.behance.net/adagio07).
-- Content of the page are taken from [Global AI Summit](https://globalaisummit.org/en/default.aspx) webpage.
+- Content of the page is taken from [Global AI Summit](https://globalaisummit.org/en/default.aspx) webpage.
