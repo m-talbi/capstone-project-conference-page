@@ -60,19 +60,40 @@ const GenerateSpeakerEl = (speaker) => `
   </article>
 `;
 
-if (speakersContainerEl) {
-  speakersData.forEach((speaker) => {
-    const speakerEl = GenerateSpeakerEl(speaker);
-    speakersContainerEl.insertAdjacentHTML('beforeend', speakerEl);
-  });
-}
+const populateSpeakersSection = () => {
+  if (speakersContainerEl) {
+    speakersData.forEach((speaker) => {
+      const speakerEl = GenerateSpeakerEl(speaker);
+      speakersContainerEl.insertAdjacentHTML('beforeend', speakerEl);
+    });
+  }
+};
 
-brandLogos.forEach((logo) => {
+const handleLogoClick = () => brandLogos.forEach((logo) => {
   logo.addEventListener('click', () => {
     mobileMenuEl.style.display = 'none';
     body.style.overflowY = 'scroll';
   });
 });
+
+const handleMobileMenuBtnsClick = () => {
+  mobileMenuOpenIcon.addEventListener('click', () => {
+    mobileMenuEl.style.display = 'block';
+    body.style.overflowY = 'hidden';
+
+    mobileMenuCloseIcon.addEventListener('click', () => {
+      mobileMenuEl.style.display = 'none';
+      body.style.overflowY = 'scroll';
+    });
+
+    navLinksContainerEl.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenuEl.style.display = 'none';
+        body.style.overflowY = 'scroll';
+      });
+    });
+  });
+};
 
 window.addEventListener('scroll', () => {
   const topMenuHeight = topMenu.offsetHeight;
@@ -84,19 +105,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-mobileMenuOpenIcon.addEventListener('click', () => {
-  mobileMenuEl.style.display = 'block';
-  body.style.overflowY = 'hidden';
-
-  mobileMenuCloseIcon.addEventListener('click', () => {
-    mobileMenuEl.style.display = 'none';
-    body.style.overflowY = 'scroll';
-  });
-
-  navLinksContainerEl.forEach((link) => {
-    link.addEventListener('click', () => {
-      mobileMenuEl.style.display = 'none';
-      body.style.overflowY = 'scroll';
-    });
-  });
-});
+populateSpeakersSection();
+handleLogoClick();
+handleMobileMenuBtnsClick();
