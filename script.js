@@ -69,7 +69,7 @@ const populateSpeakersSection = () => {
   }
 };
 
-const handleLogoClick = () => brandLogos.forEach((logo) => {
+brandLogos.forEach((logo) => {
   logo.addEventListener('click', () => {
     mobileMenuEl.style.display = 'none';
     body.style.overflowY = 'scroll';
@@ -105,6 +105,19 @@ window.addEventListener('scroll', () => {
   }
 });
 
-populateSpeakersSection();
-handleLogoClick();
-handleMobileMenuBtnsClick();
+mobileMenuOpenIcon.addEventListener('click', () => {
+  mobileMenuEl.style.display = 'block';
+  body.style.overflowY = 'hidden';
+
+  mobileMenuCloseIcon.addEventListener('click', () => {
+    mobileMenuEl.style.display = 'none';
+    body.style.overflowY = 'scroll';
+  });
+
+  navLinksContainerEl.forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenuEl.style.display = 'none';
+      body.style.overflowY = 'scroll';
+    });
+  });
+});
