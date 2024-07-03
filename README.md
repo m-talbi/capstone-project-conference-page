@@ -103,7 +103,7 @@ npm install gh-pages --save-dev
 
 👤 **Mohamed Talbi**
 
-- GitHub: [@kweeka1](https://github.com/Kweeka1)
+- GitHub: [@kweeka1](https://github.com/m-talbi)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
